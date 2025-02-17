@@ -94,6 +94,10 @@ def main():
             for passo in caminho:
                 print(passo)
 
+            # Contagem do numero de movimentos necessarios para o jogador chegar ao tesouro
+            print(f"Número de movimentos necessários: {len(caminho) - 1}")
+
+
             # Exibe o caminho no mapa com asteriscos (*)
             for x, y in caminho[1:-1]:  # Não marca S e T
                 grade[x][y] = '*'

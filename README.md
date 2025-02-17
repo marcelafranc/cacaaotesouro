@@ -1,8 +1,9 @@
 # Caca Ao Tesouro
 Atividade 1 de IA: Introdução à busca
+
 Professor Fernando Henrique Carvalho Silva
 
-#Grupo
+##Grupo
 - Gustavo Kenji Mendonça Kaneko
 - Isabella Maria Tressino Bruno 
 - Jéssica Silva Kushida

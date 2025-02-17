@@ -22,9 +22,9 @@ tesouros explora o mapa verificando as células vizinhas uma de cada vez
     Cálculo do número de movimentos necessários para alcançar o tesouro (3 pts).
 
 -------------------------------------------------------
-1. GERAR MAPA: OK
+1. GERAR MAPA: OK simples
 2. MOVIMENTACAO: ____
-3. CALCULO DO NUMERO DE MOVIMENTOS: ____
+3. CALCULO DO NUMERO DE MOVIMENTOS: OK
 
 ??????mostrar so o mapa final???????
 >> tirar os prints de caminho encontrado depoios

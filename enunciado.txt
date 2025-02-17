@@ -1,0 +1,30 @@
+CACA AO TESOURO
+ENUNCIADO DA ATIVIDADE (RESUMO)
+
+- Desenvolver um programa que ajude um "caçador de tesouros" a encontrar um 
+caminho da sua posição inicial até o tesouro em uma grade 2D.
+
+- Gere uma grade 2D com tamanho 7x7 representando um mapa que consiste em:
+    Paredes (#): Células intransponíveis.
+    Espaços vazios (.): Células transitáveis.
+    Início (S): A posição inicial do caçador de tesouros.
+    Tesouro (T): O objetivo a ser alcançado.
+
+- Sua tarefa é escrever um programa que encontre um caminho de S até T usando
+uma abordagem de exploração passo a passo. Você simulará como o caçador de 
+tesouros explora o mapa verificando as células vizinhas uma de cada vez
+
+- Atividades a serem entregues:
+    Geração do mapa de acordo com as restrições do problema (2 pts);
+    Movimentação do caçador de tesouros (5 pts);
+        Condições de movimento;
+        Condições de parada.
+    Cálculo do número de movimentos necessários para alcançar o tesouro (3 pts).
+
+-------------------------------------------------------
+1. GERAR MAPA: OK
+2. MOVIMENTACAO: ____
+3. CALCULO DO NUMERO DE MOVIMENTOS: ____
+
+??????mostrar so o mapa final???????
+>> tirar os prints de caminho encontrado depoios

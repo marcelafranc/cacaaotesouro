@@ -1,7 +1,10 @@
+# Imports
 import random
 from collections import deque
 
+# Funcao GERAR MAPA (7x7)
 def gerar_mapa(tam=7):
+
     # Bordas do mapa sao paredes (#) 
     while True:
         grade = [['#' if i == 0 or i == tam-1 or j == 0 or j == tam-1 else '.' for j in range(tam)] for i in range(tam)]
@@ -27,6 +30,7 @@ def gerar_mapa(tam=7):
         if buscaV2(grade, (inicio_x, inicio_y), (tesouro_x, tesouro_y)):
             return grade, (inicio_x, inicio_y), (tesouro_x, tesouro_y)
 
+# Funcao EXIBIR MAPA
 def exibir_mapa(grade):
     for row in grade:
         print(" ".join(row))
@@ -71,7 +75,7 @@ def buscaV2(grade, inicio, tesouro):
     explorados.add(inicio)
     possiveis_caminhos = []
     
-    while lista:
+    while pilha:
         #ponto atual, caminho
         (x, y), caminho = pilha.pop()
         
@@ -82,15 +86,15 @@ def buscaV2(grade, inicio, tesouro):
             nx, ny = x + dx, y + dy
             
             if 0 <= nx < tam and 0 <= ny < tam and grade[nx][ny] != '#' and (nx, ny) not in explorados:
-                lista.append(((nx, ny), caminho + [(nx, ny)]))
-                print(lista)
+                pilha.append(((nx, ny), caminho + [(nx, ny)]))
+                print(pilha)
                 explorados.add((nx, ny))
                 break
         else:
             # Sem saída, voltar para última bifurcação
             while possiveis_caminhos:
                 (bx, by), caminho_anterior = possiveis_caminhos.pop()
-                lista.append(((bx, by), caminho_anterior))
+                pilha.append(((bx, by), caminho_anterior))
                 break
     
     return None
@@ -117,6 +121,8 @@ def main():
         # Procura um caminho!!
         #caminho = busca(grade, inicio, tesouro)
         caminho = buscaV2(grade, inicio, tesouro)
+
+
         
         if caminho:
             print("Caminho encontrado:")
@@ -125,6 +131,7 @@ def main():
 
             # Contagem do numero de movimentos necessarios para o jogador chegar ao tesouro
             print(f"Número de movimentos necessários: {len(caminho) - 1}")
+
 
             # Exibe o caminho no mapa com asteriscos (*)
             for x, y in caminho[1:-1]:  # Não marca S e T

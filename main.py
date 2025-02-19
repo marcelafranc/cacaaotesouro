@@ -87,7 +87,7 @@ def buscaV2(grade, inicio, tesouro):
             
             if 0 <= nx < tam and 0 <= ny < tam and grade[nx][ny] != '#' and (nx, ny) not in explorados:
                 pilha.append(((nx, ny), caminho + [(nx, ny)]))
-                print(pilha)
+                #print(pilha)
                 explorados.add((nx, ny))
                 break
         else:
